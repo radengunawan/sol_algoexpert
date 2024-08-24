@@ -180,3 +180,50 @@ cases where an array can be considered
 monotonic, adhering to the definition 
 of non-decreasing or non-increasing 
 sequences.
+
+
+###
+
+UNDERSTANDING MONOTONICITY
+
+###
+
+An array is considered monotonic 
+if it is either ENTIRELY NON-DECREASING
+or
+ENTIRELY NON-INCREASING 
+
+- Non-Decreasing: 
+  EACH element is GREATER THAN or EQUAL to 
+  the previous element.
+
+- Non-Increasing: 
+  EACH element is LESS THAN or EQUAL to 
+  the previous element.
+
+Analysis of the Array `[1, 2, 2, 3, 4, 4, 5]`:
+- Non-Decreasing Check: 
+  - `1 <= 2` (True)
+  - `2 <= 2` (True)
+  - `2 <= 3` (True)
+  - `3 <= 4` (True)
+  - `4 <= 4` (True)
+  - `4 <= 5` (True)
+
+  Since all comparisons satisfy 
+  the non-decreasing condition, 
+  the array is non-decreasing.
+
+- Non-Increasing Check**:
+  - `1 > 2` (False)
+  - Since the first comparison fails, 
+    the array is not non-increasing.
+
+Conclusion:
+- The array is non-decreasing, which is 
+  one of the conditions required for an 
+  array to be monotonic.
+- It does not need to be non-increasing 
+   to be monotonic; it only needs to satisfy 
+  one of the two conditions.
+
