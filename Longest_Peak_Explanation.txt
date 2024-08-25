@@ -1,0 +1,67 @@
+
+
+step-by-step guide to solving the problem: 
+
+Finding the length of the longest peak 
+in an array.
+
+Step 1: Understand the Problem
+- We need to find the longest peak in an 
+array. A peak is defined as a 
+subarray that strictly increases, 
+reaches a maximum point (the tip), 
+and then strictly decreases. 
+The peak must be at least 3 elements 
+long.
+
+Step 2: Plan the Approach
+- We will iterate through the array, 
+looking for peaks.
+- For each potential peak, we'll 
+check how far the increasing and 
+decreasing sequences extend and 
+calculate the peak's length.
+- We’ll keep track of the
+ maximum peak length found during 
+this process.
+
+Step 3: Implement the Two-Pointer 
+Technique
+- Start from the second 
+element (index 1) and move to 
+the second-to-last element (index n-2) 
+because a peak requires at least one
+ element before and after the tip.
+- For each element, check if it's a 
+peak by comparing it with its neighbors. 
+If `array[i] > array[i-1]` and `array[i] > array[i+1]`, 
+then `array[i]` is the tip of a peak.
+
+- If a peak is found, extend the pointers to the 
+left and right to find the full length of the peak.
+
+Step 4: Expand from the Tip to Measure the Peak
+- Move left from the tip as long as the sequence is strictly increasing.
+- Move right from the tip as long as the sequence is strictly decreasing.
+- Calculate the length of this peak and update the maximum peak length if this one is longer.
+
+Step 5: Consider Edge Cases
+- Arrays with fewer than 3 elements can't have a peak.
+- Arrays without any peaks should return 0.
+
+Step 6: Implement the Code 
+The Python implementation is in the .py file:
+
+Step 7: Test the Solution
+- included in the .py file
+
+array = [1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3]
+print(longest_peak(array))  # Output should be 6
+
+
+Step 8: Analyze the Solution
+- Time Complexity: The solution is O(n) because we traverse 
+each element of the array a limited number of times.
+- Space Complexity: The solution is O(1) because we
+ only use a fixed amount of additional space, 
+regardless of the input size.
