@@ -85,27 +85,6 @@ as you go.
   return `true`; otherwise, 
   return `false`.
 
-### Sample Implementation (Python):
-```python
-
-def isMonotonic(array):
-
-    if len(array) <= 1:
-        return True
-
-    is_increasing = True
-    is_decreasing = True
-
-    for i in range(1, len(array)):
-        if array[i] > array[i - 1]:
-            is_decreasing = False
-        if array[i] < array[i - 1]:
-            is_increasing = False
-    
-    return is_increasing or is_decreasing
-```
-
-###
 
 REAL EXAMPLE OF MONOTONIC ARRAY
 
@@ -225,5 +204,50 @@ Conclusion:
   array to be monotonic.
 - It does not need to be non-increasing 
    to be monotonic; it only needs to satisfy 
-  one of the two conditions.
+  one of the two conditions (EITHER non-increasing or non-decreasing).
 
+####
+
+NON-MONOTONIC ARRAY
+
+###
+
+A non-monotonic array is one 
+that is neither entirely 
+non-decreasing nor entirely 
+non-increasing. This means the 
+elements in the array do not 
+consistently follow either of 
+these patterns.
+
+### Example of a Non-Monotonic 
+Array:
+array = [1, 3, 2, 4, 5]
+
+### Analysis:
+1. **Non-Decreasing Check**:
+   - `1 <= 3` (True)
+   - `3 <= 2` (False) - This comparison 
+fails because `3` is greater than `2`.
+   - Since one comparison fails, 
+the array is not non-decreasing.
+
+2. **Non-Increasing Check**:
+   - `1 >= 3` (False) - This 
+comparison fails because `1` 
+is less than `3`.
+   - Since the first comparison fails, 
+the array is not non-increasing.
+
+### Conclusion:
+Since the array `[1, 3, 2, 4, 5]` 
+is neither non-decreasing 
+(because of the `3 > 2` step) 
+nor non-increasing 
+(because of the `1 < 3` step), 
+it is non-monotonic.
+
+This array doesn't consistently 
+increase or decrease throughout, 
+making it a clear example of a 
+non-monotonic array.
