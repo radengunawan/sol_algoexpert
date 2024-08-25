@@ -310,3 +310,35 @@ are analyzed, understanding this distinction
  helps clarify whether data can stay 
 constant or must strictly decline to 
 meet certain conditions.
+
+An array can be both non-increasing and non-decreasing
+
+under a specific condition: when all 
+elements in the array are equal. 
+
+### Review:
+- An array is non-increasing if each 
+element is greater than or equal to 
+the next one.
+- An array is non-decreasing if each 
+element is less than or equal to 
+the next one.
+
+### When Both Conditions Are True:
+- If all elements in the array are the same, 
+then the array does not strictly 
+increase or decrease; it remains constant.
+- In this scenario, each element is equal 
+to the previous and the next one, 
+satisfying both the non-increasing and 
+non-decreasing conditions.
+
+### Example:
+array = [3, 3, 3, 3, 3]
+
+- `3 >= 3` (True for all elements)
+- `3 <= 3` (True for all elements)
+
+Since both conditions are met, 
+this array is both non-increasing 
+and non-decreasing.
