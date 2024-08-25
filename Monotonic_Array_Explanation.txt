@@ -251,3 +251,62 @@ This array doesn't consistently
 increase or decrease throughout, 
 making it a clear example of a 
 non-monotonic array.
+
+###
+ 
+NON-INCREASING vs DECREASING
+
+Is it the same concept?
+
+###
+
+non-increasing and decreasing are related 
+but distinct concepts:
+
+### Non-Increasing:
+- A sequence is non-increasing 
+if each element is 
+greater than or equal to
+ the following element.
+
+- This means that the sequence 
+can stay the same (flat) or decrease, 
+but it never increases.
+
+Example:
+array = [5, 4, 4, 3, 3, 2]
+
+- This array is non-increasing 
+because each element is either 
+less than or equal to the one before it.
+
+### Decreasing:
+- A sequence is decreasing if 
+each element is strictly greater than t
+he following element.
+- This means that the sequence 
+consistently gets smaller without 
+staying the same at any point.
+
+Example:
+array = [5, 4, 3, 2, 1]
+
+- This array is decreasing 
+because each element is strictly 
+less than the one before it.
+
+### **Key Differences:**
+- **Non-Increasing:** Allows for 
+elements to stay the same 
+(equal to each other) as long as 
+they don't increase.
+- **Decreasing:** Requires that each 
+element is strictly smaller than 
+the one before it, with no repeats 
+or flat segments.
+
+In contexts where trends or data patterns 
+are analyzed, understanding this distinction
+ helps clarify whether data can stay 
+constant or must strictly decline to 
+meet certain conditions.
